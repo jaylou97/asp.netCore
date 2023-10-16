@@ -1,0 +1,230 @@
+﻿@* @model IEnumerable<CsharpSampleWeb.Models.Person> *@
+@model MyCombinedModel
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "People List";
+}
+
+<style>
+    th{
+        text-align: center
+    }
+
+    .action{
+        text-align: center
+    }
+
+    .table td{
+        vertical-align: middle;
+    }
+</style>
+
+<div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Registered List</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Email</th>
+                                <th>Contact Number</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.People != null)
+                            {
+                                @foreach (var person in Model.People)
+                                {
+                                <tr id="row_@person.Id">
+                                    <td>@person.FirstName</td>
+                                    <td>@person.LastName</td>
+                                    <td>@person.Age</td>
+                                    <td>@person.Gender</td>
+                                    <td>@person.Email</td>
+                                    <td>@person.ContactNo</td>
+                                    <td class="action">
+                                            <a onclick="editRListJs('/Home/EditForm?id=@person.Id')" class="btn btn-success btn-circle btn-sm">
+                                            <i class="fas fa-edit"></i>
+                                        </a>&nbsp;&nbsp;
+                                        <a onclick="deleteRListJs('/Home/DeletePerson?id=@person.Id',@person.Id)" class="btn btn-danger btn-circle btn-sm">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Modal-->
+<style>
+    .gender {
+        font-size: 0.8rem;
+        border-radius: 10rem;
+        padding: 0;
+        height: 100%;
+        padding: 10px;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        appearance: none;
+        margin: 0;
+    }
+
+    .form-control.gender.input-validation-error {
+        height: 68%; /* Adjust the height if gender is invalid */
+    }
+
+    h5 {
+        color: black;
+        margin-left: auto;
+    }
+</style>
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+     aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Form!</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @if (Model.SinglePerson != null)
+                {
+                    <form class="user" asp-action="EditForm">
+                        <input asp-for="SinglePerson.Id" hidden id="selectedId"></input>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input asp-for="SinglePerson.FirstName" type="text" class="form-control form-control-user" id="FirstName"
+                                       placeholder="First Name">
+                                <span asp-validation-for="SinglePerson.FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="SinglePerson.LastName" type="text" class="form-control form-control-user" id="LastName"
+                                       placeholder="Last Name">
+                                <span asp-validation-for="SinglePerson.LastName" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input asp-for="SinglePerson.Age" type="number" class="form-control form-control-user" id="Age"
+                                       placeholder="Age">
+                                <span asp-validation-for="SinglePerson.Age" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <select asp-for="SinglePerson.Gender" class="form-control gender" id="Gender">
+                                    <option class="form-control" disabled selected>Select Gender</option>
+                                    <option class="form-control">Male</option>
+                                    <option class="form-control">Female</option>
+                                </select>
+                                <span asp-validation-for="SinglePerson.Gender" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input asp-for="SinglePerson.Email" type="email" class="form-control form-control-user" id="Email"
+                                       placeholder="Email Address">
+                                <span asp-validation-for="SinglePerson.Email" class="text-danger"></span>
+                            </div>
+                            <div class="col-sm-6">
+                                <input asp-for="SinglePerson.ContactNo" type="number" class="form-control form-control-user" id="ContactNo"
+                                       placeholder="Contact Number">
+                                <span asp-validation-for="SinglePerson.ContactNo" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-user btn-block">Update</button>
+                    </form>
+                }
+
+                <!----This is a form update return--->
+                @if (TempData["updateMsg"] != null)
+                {
+                    @if (TempData["updateMsg"] as int? == 123)
+                    {
+                        <script>
+                            Swal.fire('Updated!', '', 'success')
+                        </script>
+                    }
+                    else
+                    {
+                        <script>
+                            Swal.fire('Invalid!', 'Form must not be empty, all fields are required.', 'error')
+                        </script>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    //$("#dataTables").DataTable();
+    function deleteRListJs(url,id){ 
+        Swal.fire({
+            title: 'Confirmation!',
+            text: "Are you sure you want to delete?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    success: function (response) {
+                        if (response.message == "Deleted") {
+                            Swal.fire('Deleted!', '', 'success')
+                            // Remove the deleted row from DataTable
+                            var dataTable = $('#dataTable').DataTable();
+                            dataTable.row($('#row_' + id)).remove().draw(false);
+                        } else {
+                            Swal.fire('Invalid!', '', 'error')
+                        }
+                    }
+                });
+            }
+        })
+    }
+
+    function editRListJs(url) {
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function (response) {
+                $("#selectedId").val(response.data.id);
+                $("#FirstName").val(response.data.firstName);
+                $("#LastName").val(response.data.lastName);
+                $("#Age").val(response.data.age);
+                $("#Gender option:contains("+response.data.gender+")").prop('selected', true);
+                $("#Email").val(response.data.email);
+                $("#ContactNo").val(response.data.contactNo);
+                $("#editModal").modal("show");
+            }
+        });
+    }
+
+</script>

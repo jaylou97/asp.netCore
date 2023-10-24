@@ -17,6 +17,18 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.css",
+      "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.css"
+    },
+    {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.css.map",
+      "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.css.map"
+    },
+    {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.scss",
+      "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.scss"
+    },
+    {
       "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

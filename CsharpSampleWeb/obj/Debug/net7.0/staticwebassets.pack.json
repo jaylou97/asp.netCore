@@ -21,8 +21,8 @@
       "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.css"
     },
     {
-      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.css.map",
-      "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.css.map"
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.min.css",
+      "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.min.css"
     },
     {
       "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.scss",

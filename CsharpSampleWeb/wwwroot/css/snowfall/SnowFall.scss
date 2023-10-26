@@ -16,7 +16,7 @@ $grad: ();
 html {
     height: 100%;
     background: linear-gradient(#123 30%, #667);
-    overflow: hidden;
+    overflow: auto;
 }
 
 .snow, .snow:before, .snow:after {
@@ -27,7 +27,7 @@ html {
     right: 0;
     background-image: $grad;
     background-size: $w + px $w + px;
-    animation: snow $s linear infinite;
+    animation: snow $s*3 linear infinite;
     content: "";
 }
 
@@ -35,13 +35,13 @@ html {
     //margin-left: -$w/3 + px;
     margin-left: calc(-1 * $w / 3) + px;
     opacity: .4;
-    animation-duration: $s*2;
+    animation-duration: $s*4;
     animation-direction: reverse;
     filter: blur(3px);
 }
 
 .snow:before {
-    animation-duration: $s*3;
+    animation-duration: $s*5;
     animation-direction: reverse;
     //margin-left: -$w/2 + px;
     margin-left: calc(-1 * $w / 2) + px;

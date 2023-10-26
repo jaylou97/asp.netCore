@@ -1,0 +1,13 @@
+﻿
+th {
+    text-align: center
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+thead {
+    background-color: #4e73df;
+    color: white;
+}

@@ -1,0 +1,114 @@
+﻿
+
+.submitBtn:hover .arrow {
+    animation: slide-in-left 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.submitBtn:active {
+    transform: scale(0.97);
+}
+
+.Btn-edit {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 86px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+    transition-duration: .3s;
+    text-align: left;
+}
+
+.svg-edit {
+    width: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 13px;
+    fill: white;
+    transition-duration: .3s;
+}
+
+.Btn-edit:hover {
+    color: transparent;
+}
+
+    .Btn-edit:hover svg {
+        right: 35%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        transition-duration: .3s;
+    }
+
+.Btn-edit:active {
+    transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+
+.Btn-delete {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: red;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(140, 32, 212);
+    transition-duration: .3s;
+    text-align: left;
+}
+
+.svg-delete {
+    width: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    fill: white;
+    transition-duration: .3s;
+}
+
+.Btn-delete:hover {
+    color: transparent;
+}
+
+    .Btn-delete:hover svg {
+        right: 41%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        transition-duration: .3s;
+    }
+
+.Btn-delete:active {
+    transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+

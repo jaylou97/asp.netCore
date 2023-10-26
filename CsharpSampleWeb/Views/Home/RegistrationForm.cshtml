@@ -27,6 +27,11 @@
     .form-control.gender.input-validation-error {
         height: 68%; /* Adjust the height if gender is invalid */
     }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
 </style>
 
 <div class="container">
@@ -39,7 +44,25 @@
                 <div class="col-lg-7">
                     <div class="p-5">
                         <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Registration Form!</h1>
+                            <h1 class="textAnimation">
+                                <span>R</span>
+                                <span>e</span>
+                                <span>g</span>
+                                <span>i</span>
+                                <span>s</span>
+                                <span>t</span>
+                                <span>r</span>
+                                <span>a</span>
+                                <span>t</span>
+                                <span>i</span>
+                                <span>o</span>
+                                <span>n &nbsp;</span>
+                                <span>F</span>
+                                <span>o</span>
+                                <span>r</span>
+                                <span>m</span>
+                                <span>!</span>
+                            </h1>
                         </div>
                         <form class="user" asp-action="RegistrationForm">
                             <div class="form-group row">
@@ -81,31 +104,8 @@
                                     <span asp-validation-for="ContactNo" class="text-danger"></span>
                                 </div>
                             </div>
-                           @*  <div class="form-group">
-                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                       placeholder="Email Address">
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-6 mb-3 mb-sm-0">
-                                    <input type="password" class="form-control form-control-user"
-                                           id="exampleInputPassword" placeholder="Password">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="password" class="form-control form-control-user"
-                                           id="exampleRepeatPassword" placeholder="Repeat Password">
-                                </div>
-                            </div>
-                            <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                Register
-                            </a> *@
-                            <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
+                            <button type="submit" class="btn btn-primary btn-user btn-block submitBtn">Submit <svg fill="white" viewBox="0 0 448 512" height="1em" class="arrow"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"></path></svg></button>
                             <hr>
-                            @* <a href="index.html" class="btn btn-google btn-user btn-block">
-                                <i class="fab fa-google fa-fw"></i> Register with Google
-                            </a>
-                            <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
-                            </a> *@
                         </form>
                         <!----This is a form submit return--->
                         @if (TempData["msg"] != null)

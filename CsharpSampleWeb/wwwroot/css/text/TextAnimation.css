@@ -1,0 +1,92 @@
+﻿/* JUMP */
+.textAnimation {
+    cursor: default;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: revert;
+    display: block;
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+    .textAnimation span {
+        position: relative;
+        top: 10px;
+        display: inline-block;
+        -webkit-animation: bounce 0.8s ease infinite alternate;
+    }
+
+        .textAnimation span:nth-child(2) {
+            -webkit-animation-delay: 0.1s;
+        }
+
+        .textAnimation span:nth-child(3) {
+            -webkit-animation-delay: 0.2s;
+        }
+
+        .textAnimation span:nth-child(4) {
+            -webkit-animation-delay: 0.3s;
+        }
+
+        .textAnimation span:nth-child(5) {
+            -webkit-animation-delay: 0.4s;
+        }
+
+        .textAnimation span:nth-child(6) {
+            -webkit-animation-delay: 0.5s;
+        }
+
+        .textAnimation span:nth-child(7) {
+            -webkit-animation-delay: 0.6s;
+        }
+
+        .textAnimation span:nth-child(8) {
+            -webkit-animation-delay: 0.2s;
+        }
+
+        .textAnimation span:nth-child(9) {
+            -webkit-animation-delay: 0.3s;
+        }
+
+        .textAnimation span:nth-child(10) {
+            -webkit-animation-delay: 0.4s;
+        }
+
+        .textAnimation span:nth-child(11) {
+            -webkit-animation-delay: 0.5s;
+        }
+
+        .textAnimation span:nth-child(12) {
+            -webkit-animation-delay: 0.6s;
+        }
+
+        .textAnimation span:nth-child(13) {
+            -webkit-animation-delay: 0.7s;
+        }
+
+        .textAnimation span:nth-child(14) {
+            -webkit-animation-delay: 0.8s;
+        }
+
+        .textAnimation span:nth-child(15) {
+            -webkit-animation-delay: 0.9s;
+        }
+
+        .textAnimation span:nth-child(16) {
+            -webkit-animation-delay: 0.10s;
+        }
+
+        .textAnimation span:nth-child(17) {
+            -webkit-animation-delay: 0.20s;
+        }
+
+/* ANIMATION */
+@-webkit-keyframes bounce {
+    100% {
+        top: -10px;
+    }
+}

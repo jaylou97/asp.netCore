@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\CsharpSampleWeb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\buttons\\CustomizedButtons.css",
+      "PackagePath": "staticwebassets\\css\\buttons\\CustomizedButtons.css"
+    },
+    {
       "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\sb-admin-2.css",
       "PackagePath": "staticwebassets\\css\\sb-admin-2.css"
     },
@@ -27,6 +31,14 @@
     {
       "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\snowfall\\SnowFall.scss",
       "PackagePath": "staticwebassets\\css\\snowfall\\SnowFall.scss"
+    },
+    {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\table\\CustomizedTable.css",
+      "PackagePath": "staticwebassets\\css\\table\\CustomizedTable.css"
+    },
+    {
+      "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\text\\TextAnimation.css",
+      "PackagePath": "staticwebassets\\css\\text\\TextAnimation.css"
     },
     {
       "Id": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\favicon.ico",

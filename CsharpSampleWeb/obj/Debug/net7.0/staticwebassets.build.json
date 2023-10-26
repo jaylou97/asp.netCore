@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "g8Ix8F8khouyJkqo1MiMguhjQPAYjGHVa0eig4v8QYY=",
+  "Hash": "yD9lTmGXvqbuS0dNWfyW22lkV3v5ryEk3j0ezvKkgL0=",
   "Source": "CsharpSampleWeb",
   "BasePath": "_content/CsharpSampleWeb",
   "Mode": "Default",
@@ -629,6 +629,23 @@
       "OriginalItemSpec": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\CsharpSampleWeb.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\buttons\\CustomizedButtons.css",
+      "SourceId": "CsharpSampleWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\",
+      "BasePath": "_content/CsharpSampleWeb",
+      "RelativePath": "css/buttons/CustomizedButtons.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\buttons\\CustomizedButtons.css"
+    },
+    {
       "Identity": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\sb-admin-2.css",
       "SourceId": "CsharpSampleWeb",
       "SourceType": "Discovered",
@@ -729,6 +746,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\snowfall\\SnowFall.scss"
+    },
+    {
+      "Identity": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\table\\CustomizedTable.css",
+      "SourceId": "CsharpSampleWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\",
+      "BasePath": "_content/CsharpSampleWeb",
+      "RelativePath": "css/table/CustomizedTable.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\table\\CustomizedTable.css"
+    },
+    {
+      "Identity": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\css\\text\\TextAnimation.css",
+      "SourceId": "CsharpSampleWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\",
+      "BasePath": "_content/CsharpSampleWeb",
+      "RelativePath": "css/text/TextAnimation.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\text\\TextAnimation.css"
     },
     {
       "Identity": "C:\\Users\\JAY\\source\\repos\\CsharpSampleWeb\\CsharpSampleWeb\\wwwroot\\favicon.ico",

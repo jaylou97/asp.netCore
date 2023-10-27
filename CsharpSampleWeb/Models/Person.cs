@@ -11,7 +11,8 @@ namespace CsharpSampleWeb.Models
         public string? LastName { get; set; }
         [Required]
         public int Age { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Gender is required")]
+        [RegularExpression("^(Male|Female)$", ErrorMessage = "Gender must be Male or Female")]
         public string? Gender { get; set; }
         [Required]
         [EmailAddress]
@@ -19,7 +20,6 @@ namespace CsharpSampleWeb.Models
         [Required(ErrorMessage = "Contact number is required.")]
         [RegularExpression(@"^\d{11}$", ErrorMessage = "Please enter a 11-digit contact number.")]
         public string? ContactNo { get; set; }
-
     }
     public class MyCombinedModel
     {

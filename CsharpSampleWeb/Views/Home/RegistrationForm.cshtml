@@ -108,16 +108,16 @@
                             <hr>
                         </form>
                         <!----This is a form submit return--->
-                        @if (TempData["msg"] != null)
+                        @if (TempData["submitMsg"] != null)
                         {
-                            @if (TempData["msg"] == "Submitted")
+                            @if ((int)TempData["submitMsg"] == 143)
                             {
                                 <script>
                                     Swal.fire('Submitted!', '', 'success')
                                     $("#FirstName").val('');
                                     $("#LastName").val('');
                                     $("#Age").val('');
-                                    @* $("#Gender").val(''); *@
+                                    $("#Gender option:contains('Select Gender')").prop('selected', true);
                                     $("#Email").val('');
                                     $("#ContactNo").val('');
                                 </script>
@@ -125,7 +125,7 @@
                             else
                             {
                                 <script>
-                                    Swal.fire('Invalid!', '@TempData["msg"]', 'error')
+                                    Swal.fire('Invalid!', '@TempData["submitMsg"]', 'error')
                                 </script>
                             }
                         }

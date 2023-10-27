@@ -45,18 +45,16 @@ namespace CsharpSampleWeb.Controllers
             {
                 _ctx.Person.Add(person);
                 _ctx.SaveChanges();
-                TempData["msg"] = "Submitted";
+                TempData["submitMsg"] = 143;
             }
             catch (Exception ex)
             {
-                TempData["msg"] = ex.Message;
+                TempData["submitMsg"] = ex.Message;
             }
-            return View();
+            return RedirectToAction("RegistrationForm");
         }
         public IActionResult PeopleList()
         {
-            //var person = _ctx.Person.ToList();
-            //return View(person);*/
             var people = _ctx.Person.ToList(); // Fetch the list of people from your data source
             // Fetch a single person (adjust your code to fetch the desired person)
             var singlePerson = _ctx.Person.FirstOrDefault();
@@ -105,16 +103,6 @@ namespace CsharpSampleWeb.Controllers
         [HttpPost]
         public IActionResult EditForm(MyCombinedModel person)
         {
-            // update function not working if this condition is not commented
-            /*if (!ModelState.IsValid)
-            {
-                //return RedirectToAction("PeopleList");
-                // Debugging: Check ModelState for errors
-                //var errors = ModelState.Values.SelectMany(v => v.Errors);
-                // Log or display the errors
-                //return View();
-            }*/
-
             try
             {
                 _ctx.Person.Update(person.SinglePerson);
@@ -125,7 +113,6 @@ namespace CsharpSampleWeb.Controllers
             {
                 TempData["updateMsg"] = ex.Message;
             }
-            //return View();
             return RedirectToAction("PeopleList");
         }
 
